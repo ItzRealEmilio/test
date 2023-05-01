@@ -334,7 +334,9 @@ function buildPlugin([BasePlugin, PluginApi]) {
 			const {
 				BadgeKeys
 			} = external_PluginApi_namespaceObject.WebpackModules.getByProps("BadgeKeys");
-			const {
+			const BadgeModules = WebpackModules.getByProps('BADGE_1');
+const BadgeKeys = Object.keys(BadgeModules).filter(x => x.startsWith('BADGE_'));
+
 				UserFlags
 			} = external_PluginApi_namespaceObject.WebpackModules.getByProps("UserFlags");
 			const UserFlagsFormatted = [{
