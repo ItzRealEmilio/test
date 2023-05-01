@@ -434,6 +434,9 @@ function buildPlugin([BasePlugin, PluginApi]) {
 				return ~d.indexOf("closeUserProfileModal") && ~d.indexOf("openPremiumSettings");
 			}));
 			const User = external_PluginApi_namespaceObject.WebpackModules.getByPrototypes("getAvatarURL");
+			if (!external_PluginApi_namespaceObject.WebpackModules.getByProps('BadgeKeys')) {
+   return BdApi.alert("Error", "The required module is undefined");
+}
 			const BadgeList = external_PluginApi_namespaceObject.WebpackModules.getByProps("BadgeSizes").default;
 			const boosts = [{
 				id: "boost1",
